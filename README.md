@@ -12,6 +12,8 @@ Nano Unit Converter is a thoroughly-tested library for converting units of the [
 1000000000000000000000000000000 Raw = 1 Mnano
 ```
 
+Note: In this library, Raw and Mnano are referred to as `raw` and `mega`, respectively. This is to avoid casing conflicts between Nano units and coding conventions. For example, in the Nano unit system, 1 Mnano != 1 mnano. Should other units be added to this library in the future, they will also be referred to by their metric prefixes, such as `kilo` and `giga`.
+
 ## Installation
 
 ```

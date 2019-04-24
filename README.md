@@ -17,7 +17,7 @@ Note: In this library, Raw and Mnano are referred to as `raw` and `mega`, respec
 ## Installation
 
 ```
-npm install nano-unit-converter --save
+npm install nano-unit-converter
 ```
 
 ## Examples
@@ -77,3 +77,8 @@ Converts raw amount to mega amount.
 - **Error**: The raw amount must not be negative.
 - **Error**: The raw amount is too small.
 - **Error**: The raw amount is too large.
+
+## See Also
+
+- [Nano Address Validator](https://github.com/alecrios/nano-address-validator) - Validates Nano addresses for syntax and checksum integrity.
+- [Nano URI Generator](https://github.com/alecrios/nano-uri-generator) - Generates Nano URIs for sending amounts, changing representatives, and more.

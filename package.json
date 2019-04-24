@@ -1,7 +1,7 @@
 {
   "name": "nano-unit-converter",
   "version": "1.0.1",
-  "description": "Converts Nano units",
+  "description": "Converts Nano amounts from one unit to another",
   "main": "lib/nano-unit-converter.js",
   "scripts": {
     "build": "webpack --env dev && webpack --env build && npm run test",

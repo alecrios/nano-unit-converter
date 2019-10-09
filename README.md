@@ -20,6 +20,44 @@ Note: In this library, Raw and Mnano are referred to as `raw` and `mega`, respec
 npm install nano-unit-converter
 ```
 
+## API
+
+``` ts
+/**
+ * Converts mega amount to raw amount.
+ *
+ * @param {number | string} mega The mega amount.
+ *
+ * @throws {Error} The mega amount must be defined.
+ * @throws {TypeError} The mega amount must be a string or a number.
+ * @throws {Error} The mega amount is invalid.
+ * @throws {Error} The mega amount must not be negative.
+ * @throws {Error} The mega amount is too small.
+ * @throws {Error} The mega amount is too large.
+ *
+ * @returns {string} The raw amount.
+ */
+export declare function megaToRaw(mega: number | string): string;
+```
+
+``` ts
+/**
+ * Converts raw amount to mega amount.
+ *
+ * @param {number | string} raw The raw amount.
+ *
+ * @throws {Error} The raw amount must be defined.
+ * @throws {TypeError} The raw amount must be a string or a number.
+ * @throws {Error} The raw amount is invalid.
+ * @throws {Error} The raw amount must not be negative.
+ * @throws {Error} The raw amount is too small.
+ * @throws {Error} The raw amount is too large.
+ *
+ * @returns {string} The mega amount.
+ */
+export declare function rawToMega(raw: number | string): string;
+```
+
 ## Examples
 
 ```js
@@ -33,50 +71,6 @@ rawToMega('100000000000000000000000000000')   // '0.1'
 rawToMega('1000000000000000000000000000000')  // '1'
 rawToMega('10000000000000000000000000000000') // '10'
 ```
-
-## API
-
-### `megaToRaw(mega)`
-
-Converts mega amount to raw amount.
-
-#### Arguments
-
-- **mega (_Number_|_String_)**: The mega amount.
-
-#### Returns
-
-- **(_String_)**: The raw amount.
-
-#### Exceptions
-
-- **Error**: The mega amount must be defined.
-- **TypeError**: The mega amount must be a string or a number.
-- **Error**: The mega amount is invalid.
-- **Error**: The mega amount must not be negative.
-- **Error**: The mega amount is too small.
-- **Error**: The mega amount is too large.
-
-### `rawToMega(raw)`
-
-Converts raw amount to mega amount.
-
-#### Arguments
-
-- **raw (_Number_|_String_)**: The raw amount.
-
-#### Returns
-
-- **(_String_)**: The mega amount.
-
-#### Exceptions
-
-- **Error**: The raw amount must be defined.
-- **TypeError**: The raw amount must be a string or a number.
-- **Error**: The raw amount is invalid.
-- **Error**: The raw amount must not be negative.
-- **Error**: The raw amount is too small.
-- **Error**: The raw amount is too large.
 
 ## See Also
 

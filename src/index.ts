@@ -24,16 +24,19 @@ const MEGA_MAX_AMOUNT = new Big(RAW_MAX_AMOUNT).times(MEGA_IN_RAW);
 
 /**
  * Converts mega amount to raw amount.
- * @param {Number|String} mega The mega amount.
+ *
+ * @param {number | string} mega The mega amount.
+ *
  * @throws {Error} The mega amount must be defined.
  * @throws {TypeError} The mega amount must be a string or a number.
  * @throws {Error} The mega amount is invalid.
  * @throws {Error} The mega amount must not be negative.
  * @throws {Error} The mega amount is too small.
  * @throws {Error} The mega amount is too large.
- * @returns {String} The raw amount.
+ *
+ * @returns {string} The raw amount.
  */
-export const megaToRaw = (mega) => {
+export function megaToRaw(mega: number | string): string {
 	if (mega === undefined) {
 		throw Error('The mega amount must be defined.');
 	}
@@ -42,7 +45,7 @@ export const megaToRaw = (mega) => {
 		throw TypeError('The mega amount must be a string or a number.');
 	}
 
-	let megaBig;
+	let megaBig: Big;
 
 	try {
 		megaBig = new Big(mega);
@@ -63,20 +66,23 @@ export const megaToRaw = (mega) => {
 	}
 
 	return megaBig.times(RAW_IN_MEGA).toString();
-};
+}
 
 /**
  * Converts raw amount to mega amount.
- * @param {Number|String} raw The raw amount.
+ *
+ * @param {number | string} raw The raw amount.
+ *
  * @throws {Error} The raw amount must be defined.
  * @throws {TypeError} The raw amount must be a string or a number.
  * @throws {Error} The raw amount is invalid.
  * @throws {Error} The raw amount must not be negative.
  * @throws {Error} The raw amount is too small.
  * @throws {Error} The raw amount is too large.
- * @returns {String} The mega amount.
+ *
+ * @returns {string} The mega amount.
  */
-export const rawToMega = (raw) => {
+export function rawToMega(raw: number | string): string {
 	if (raw === undefined) {
 		throw Error('The raw amount must be defined.');
 	}
@@ -85,7 +91,7 @@ export const rawToMega = (raw) => {
 		throw TypeError('The raw amount must be a string or a number.');
 	}
 
-	let rawBig;
+	let rawBig: Big;
 
 	try {
 		rawBig = new Big(raw);
@@ -106,4 +112,4 @@ export const rawToMega = (raw) => {
 	}
 
 	return rawBig.times(MEGA_IN_RAW).toString();
-};
+}

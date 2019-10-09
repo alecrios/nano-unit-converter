@@ -1,6 +1,6 @@
 {
 	"name": "nano-unit-converter",
-	"version": "1.0.1",
+	"version": "2.0.0",
 	"description": "Converts Nano amounts from one unit to another",
 	"source": "src/index.ts",
 	"types": "dist/index.d.ts",
